@@ -23,6 +23,13 @@ export default createGlobalStyle`
         list-style: none;
     }
 
+    .iconCss {
+        width: 16px;
+        height: 16px;
+        fill: var(--icon);
+        flex-shrink: 0;
+    }
+
     :root {
         --primary: #FFFFFF;
         --black: #1B1F23;

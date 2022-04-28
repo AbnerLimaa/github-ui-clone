@@ -86,29 +86,22 @@ export const Column = styled.ul`
     }
 `;
 
-const iconCss = css`
-    width: 16px;
-    height: 16px;
-    fill: var(--icon);
-    flex-shrink: 0;
-`;
+export const PeopleIcon = styled(RiGroupLine).attrs({
+    className: "iconCss"
+})``;
 
-export const PeopleIcon = styled(RiGroupLine)`
-    ${iconCss}
-`;
+export const CompanyIcon = styled(RiBuilding4Line).attrs({
+    className: "iconCss"
+})``;
 
-export const CompanyIcon = styled(RiBuilding4Line)`
-    ${iconCss}
-`;
+export const LocationIcon = styled(RiMapPin2Line).attrs({
+    className: "iconCss"
+})``;
 
-export const LocationIcon = styled(RiMapPin2Line)`
-    ${iconCss}
-`;
+export const EmailIcon = styled(RiMailLine).attrs({
+    className: "iconCss"
+})``;
 
-export const EmailIcon = styled(RiMailLine)`
-    ${iconCss}
-`;
-
-export const BlogIcon = styled(RiLinksLine)`
-    ${iconCss}
-`;
+export const BlogIcon = styled(RiLinksLine).attrs({
+    className: "iconCss"
+})``;
