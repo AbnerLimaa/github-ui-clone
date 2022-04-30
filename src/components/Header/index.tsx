@@ -1,8 +1,14 @@
 import React, { useState }from "react";
 import { useNavigate } from "react-router-dom";
+import { ThemeName } from "../../styles/Themes";
 import { Container, Logo, SearchBar } from "./styles";
 
-const Header: React.FC = () => {
+interface Props {
+    themeName: ThemeName;
+    setThemeName: (newName: ThemeName) => void;
+}
+
+const Header: React.FC<Props> = (props: Props) => {
 
     const [search, setSearch] = useState('');
     const navigate = useNavigate();
@@ -12,14 +18,18 @@ const Header: React.FC = () => {
         navigate('/' + search.toLowerCase().trim());
     }
 
+    function toggleTheme() {
+        props.setThemeName(props.themeName === 'light' ? 'dark' : 'light');
+    }
+
     return (
         <Container>
-            <Logo />
-            <SearchBar>
+            <Logo onClick={toggleTheme}/>
+            <SearchBar onSubmit={handleSubmit}>
                 <input 
                     placeholder="Enter username or Repository"
                     value={search}
-                    onChange={e => setSearch(e.currentTarget.value)}/>
+                    onChange={(e) => setSearch(e.currentTarget.value)}/>
             </SearchBar>
         </Container>
     )

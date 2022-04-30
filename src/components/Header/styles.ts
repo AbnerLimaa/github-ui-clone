@@ -13,6 +13,11 @@ export const Logo = styled(FaGithub)`
     width: 32px;
     height: 32px;
     flex-shrink: 0;   
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+    }
 `;
 
 export const SearchBar = styled.form`
@@ -25,11 +30,11 @@ export const SearchBar = styled.form`
         border-radius: 6px;
         padding: 7px 12px;
         width: 100%;
+        transition: width .2s ease-out, color .2s ease-out;
+        color: var(--search-placeholder);
 
         &:focus {
             width: 318px;
         }
-
-        transition: width .2s ease-out, color .2s ease-out;
     }
 `;
