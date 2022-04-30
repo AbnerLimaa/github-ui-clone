@@ -1,4 +1,4 @@
-import styled, { css }from 'styled-components';
+import styled from 'styled-components';
 import { RiGroupLine, RiBuilding4Line, RiMapPin2Line, RiMailLine, RiLinksLine } from 'react-icons/ri';
 
 export const Container = styled.div`
@@ -43,6 +43,7 @@ export const Avatar = styled.img`
 
     @media (min-width: 768px) {
         width: 100%;
+        margin-top: -34px;
     }
 `;
 
